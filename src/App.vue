@@ -1,10 +1,12 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <RouterView v-slot="{ Component }">
+    <component :is="Component" />
+  </RouterView>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+// import { RouterLink } from 'vue-router'
 
 export default {
   name: 'App',
