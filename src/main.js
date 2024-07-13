@@ -4,8 +4,10 @@ import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
 
 import App from './App.vue'
 import router from './router'
+import { Quasar } from 'quasar'
+import quasarUserOptions from './quasar-user-options'
 
-const app = createApp(App)
+const app = createApp(App).use(Quasar, quasarUserOptions)
 
 const pinia = createPinia()
 pinia.use(piniaPluginPersistedstate)

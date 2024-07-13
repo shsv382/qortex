@@ -1,22 +1,30 @@
 <template>
   <RouterView v-slot="{ Component }">
-    <component :is="Component" />
+    <Layout>
+      <component :is="Component" />
+    </Layout>
   </RouterView>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 // import { RouterLink } from 'vue-router'
+import Layout from './components/Layout/Layout.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Layout
   }
 }
 </script>
 
 <style>
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
